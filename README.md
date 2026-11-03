@@ -41,6 +41,8 @@ def predict_solar_output(irradiance, panel_area, efficiency=0.18):
 
 # Example usage
 predicted_kwh = predict_solar_output(irradiance=0.85, panel_area=25)
-print(f"Predicted Output: {predicted_kwh:.2f} kWh")
+print(f"Predicted Output: {predicted_kwh:.2f} kWh")´´´
+
+
 
 
