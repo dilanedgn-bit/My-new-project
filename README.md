@@ -41,8 +41,41 @@ def predict_solar_output(irradiance, panel_area, efficiency=0.18):
 
 # Example usage
 predicted_kwh = predict_solar_output(irradiance=0.85, panel_area=25)
-print(f"Predicted Output: {predicted_kwh:.2f} kWh")´´´
+print(f"Predicted Output: {predicted_kwh:.2f} kWh")
+```
+## Data sources and AI methods
 
+The project relies on real-world open data sources and standard machine learning techniques:
+
+* **Data Sources:**
+  * OpenWeatherMap API (Real-time weather forecasts and solar radiation data)
+  * Open Power System Data / Smart Meter Datasets (Historical household load profiles)
+
+* **AI Methods:**
+  * **Regression Models (Random Forest / Linear Regression):** To estimate power output based on weather parameters.
+  * **Time Series Forecasting (LSTM / ARIMA):** To forecast electricity demand based on historical usage patterns.
+
+## Challenges
+
+What this project does NOT solve:
+* It cannot control weather fluctuations or sudden cloud coverage changes in real-time without low latency updates.
+* It does not automatically execute device switching unless connected to supported smart plugs/APIs.
+
+Limitations and ethical considerations:
+* Household data must be handled securely to protect user privacy regarding daily routines.
+* Prediction accuracy relies heavily on external weather API quality.
+
+## What next?
+
+How this project could grow:
+* Integration with smart home standards (e.g., Home Assistant API) for automatic device control.
+* Adding dynamic electricity tariff integration (to charge batteries when grid power is cheapest).
+* Real-world testing with live smart meter feeds.
+
+## Acknowledgments
+
+* Inspired by open-source home automation projects and the need for sustainable energy management.
+* Building AI course by Reaktor Innovations and University of Helsinki.
 
 
 
